@@ -11,9 +11,6 @@ jobs:
 
     env:
       API_URL: ${{ secrets.API_URL }}
-      OWNER: ${{ secrets.OWNER }}
-      APPOINTMENT_TYPE_ID: ${{ secrets.APPOINTMENT_TYPE_ID }}
-      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
       EMAIL_URL: ${{ secrets.EMAIL_URL }}
       EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}
       EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}

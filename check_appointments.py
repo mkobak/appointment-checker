@@ -12,9 +12,6 @@ import json
 # Configuration
 API_URL = os.getenv("API_URL")
 PARAMS = {
-    # "owner": os.getenv("OWNER"),
-    # "appointmentTypeId": os.getenv("APPOINTMENT_TYPE_ID"),
-    # "calendarId": os.getenv("CALENDAR_ID"),
     "startDate": datetime.date.today().strftime("%Y-%m-%d"),
     "maxDays": 5,
     "timezone": "Europe/Zurich"
