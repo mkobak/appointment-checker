@@ -41,7 +41,7 @@ def send_simple_message(date):
         data={
             "from": sender,
             "to": receiver,
-            "subject": "New appointment found",
+            "subject": f"New appointment found - {date}",
             "text": f"A new appointment has been found. Date: {date}"
         }
     )
