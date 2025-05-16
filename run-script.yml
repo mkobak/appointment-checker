@@ -1,0 +1,32 @@
+name: Run Script and Email
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    env:
+      API_URL: ${{ secrets.API_URL }}
+      OWNER: ${{ secrets.OWNER }}
+      APPOINTMENT_TYPE_ID: ${{ secrets.APPOINTMENT_TYPE_ID }}
+      CALENDAR_ID: ${{ secrets.CALENDAR_ID }}
+      EMAIL_URL: ${{ secrets.EMAIL_URL }}
+      EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}
+      EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
+      EMAIL_RECEIVER: ${{ secrets.EMAIL_RECEIVER }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run script
+        run: python check_appointments.py

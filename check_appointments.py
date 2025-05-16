@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 import requests
 import datetime
@@ -7,7 +7,7 @@ import ctypes
 import json
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # Configuration
 API_URL = os.getenv("API_URL")
@@ -22,8 +22,6 @@ PARAMS = {
 
 # File to store the last recorded closest date
 THRESHOLD_FILE = "threshold_date.json"
-CHECK_INTERVAL = 0.5 * 60 * 60  # Check every 6 hours
-
 
 # Load additional email configuration from environment variables
 url = os.getenv("EMAIL_URL")
@@ -99,6 +97,4 @@ def check_for_closer_appointments():
         print("No appointments available.")
 
 if __name__ == "__main__":
-    while True:
-        check_for_closer_appointments()
-        time.sleep(CHECK_INTERVAL)
+    check_for_closer_appointments()
