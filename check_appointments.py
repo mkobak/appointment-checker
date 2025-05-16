@@ -10,11 +10,11 @@ import json
 # load_dotenv()
 
 # Configuration
-API_URL = os.getenv("API_URL")
+API_URL = "https://medmassagemuehlebach.as.me/api/scheduling/v1/availability/times?owner=293df283&appointmentTypeId=20389109&calendarId=5106597" # os.getenv("API_URL")
 PARAMS = {
-    "owner": os.getenv("OWNER"),
-    "appointmentTypeId": os.getenv("APPOINTMENT_TYPE_ID"),
-    "calendarId": os.getenv("CALENDAR_ID"),
+    # "owner": os.getenv("OWNER"),
+    # "appointmentTypeId": os.getenv("APPOINTMENT_TYPE_ID"),
+    # "calendarId": os.getenv("CALENDAR_ID"),
     "startDate": datetime.date.today().strftime("%Y-%m-%d"),
     "maxDays": 5,
     "timezone": "Europe/Zurich"
