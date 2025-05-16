@@ -1,4 +1,4 @@
-name: Run Script and Email
+name: Check Appointments
 
 on:
   schedule:
