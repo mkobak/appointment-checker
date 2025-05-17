@@ -2,7 +2,7 @@ name: Check Appointments
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '0 7-23 * * *'
   workflow_dispatch:
 
 jobs:

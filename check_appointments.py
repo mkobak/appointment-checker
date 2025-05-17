@@ -48,7 +48,6 @@ def send_simple_message(date):
     print(f"Status Code: {response.status_code}")
     print(f"Response: {response.text}")
 
-
 # Function to load the last threshold date from file
 def load_threshold_date():
     try:
