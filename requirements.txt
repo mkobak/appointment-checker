@@ -1,2 +1,2 @@
 requests
-python-dotenv
+python-dotenv # comment out for deployment on github actions
